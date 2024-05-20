@@ -1,0 +1,31 @@
+<apex:page controller="myOpptyController" tabStyle="Opportunity">
+
+    <apex:pageBlock>
+
+    <apex:pageBlockTable value="{!opptyList}" var="div">  
+
+          <apex:column >
+
+                    <apex:pageBlockTable value="{!div.OpportunityLineItems}"  var="custom">
+
+                    <apex:column value="{!custom.Product2Id}"/>
+                    <apex:column value="{!custom.Manufacturer__c}"/>
+                    <apex:column value="{!custom.Product_Details__c}"/>
+                    <apex:column value="{!custom.Quantity}"/>
+                    <apex:column value="{!custom.UnitPrice}"/>
+                    <apex:column value="{!custom.TotalPrice}"/>
+                    <apex:column value="{!custom.Client_Unit_Price__c}"/>
+                    <apex:column value="{!custom.Client_Total_Price__c}"/>
+                    <apex:column value="{!custom.Markup_Percent__c}"/>
+                    <apex:column value="{!custom.EB_Profit__c}"/>
+                    <apex:column value="{!custom.Profit_as_Percentage__c}"/>
+
+                </apex:pageBlockTable>
+
+        </apex:column>
+
+       </apex:pageBlockTable>
+
+</apex:pageBlock>  
+
+</apex:page>
